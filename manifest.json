@@ -1,0 +1,2 @@
+{ "name": "臨床検体 採取スケジュール", "short_name": "検体スケジュール", "start_url": "./", "display": "standalone",
+  "background_color": "#f4f5f7", "theme_color": "#ffffff", "icons": [{ "src": "icon-180.png", "sizes": "180x180", "type": "image/png" }] }

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- 外部のスクリプトは一切読み込まない。通信先は Dropbox の API だけに限定 -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://api.dropboxapi.com https://content.dropboxapi.com; manifest-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="検体スケジュール">
+<meta name="theme-color" content="#ffffff">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<title>検体スケジュール</title>
+</head>
+<body>
+<div id="demo" class="demo hidden">デモ表示：架空のデータです。保存しても Dropbox には書き込みません。</div>
+<header>
+  <h1>検体スケジュール</h1>
+  <span id="sync" class="sync"></span>
+  <button id="reload" class="iconbtn" title="読み込み直す">↻</button>
+  <button id="logout" class="iconbtn" title="ログアウト">⎋</button>
+</header>
+<main id="app"></main>
+<nav id="tabs" class="tabs hidden">
+  <button data-tab="plan"><span class="ic">📅</span>予定</button>
+  <button data-tab="add"><span class="ic">＋</span>新規登録</button>
+  <button data-tab="edit"><span class="ic">✏️</span>編集</button>
+  <button data-tab="closed"><span class="ic">🚫</span>休診日</button>
+</nav>
+<div id="toast" class="hidden"></div>
+<script src="config.js"></script>
+<script src="holidays.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
